@@ -1,11 +1,11 @@
-import React from 'react';
+import React from "react";
 
-const Part = (props) => {
-    return (
-      <p>
-        {props.part.name} {props.part.exercises}
-      </p>
-    );
-  };
+const Part = ({ part }) => {
+  return part.map((part) => (
+    <p key={part.id} >
+      {part.name} {part.exercises}
+    </p>
+  ));
+};
 
 export default Part;
